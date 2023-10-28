@@ -4,7 +4,8 @@ import static com.zipcodewilmington.scientificcalculator.Console.print;
 import static com.zipcodewilmington.scientificcalculator.Console.println;
 
 public class DisplayClass {
-    public static Integer stringToInt(String prompt){
+    //trying to convert input string into ints/doubles/ and chars
+   /* public static Integer stringToInt(String prompt){
         println(prompt);
         Integer strInt;
         try {
@@ -14,5 +15,11 @@ public class DisplayClass {
         println("invalid num");
         }
         return strInt;
+    }*/
+    static String integerExtract(String prompt){
+        prompt = Console.getStringInput(System.in.toString());
+        prompt = prompt.replaceAll("\\D", " ");
+        println(prompt);
+        return prompt;
     }
 }
