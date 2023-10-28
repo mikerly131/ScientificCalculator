@@ -11,15 +11,14 @@ public class TestBasicMath {
     public void testAddingInts() {
         int test = BasicMath.addNumbers(5, 4);
         int valid = 9;
-        assertTrue(test == valid);
-        return;
+        assertEquals(test, valid);
     }
 
     @Test
     public void testAddingDoubles() {
         double test = BasicMath.addNumbers(5.0, 4.3);
         double valid = 9.3;
-        assertTrue(test == valid);
+        assertEquals(test, valid, 0.0);
     }
 
     @Test
@@ -33,13 +32,22 @@ public class TestBasicMath {
     @Test
     public void testDividingInts() {
         int test = BasicMath.divideNumbers(12, 4);
+        System.out.print(test);
         int valid = 3;
         assertTrue(test == valid);
     }
 
     @Test
+    public void testGettingRemainders() {
+        int test = BasicMath.getRemainders(11, 4);
+        int valid = 3;
+        assertEquals(test, valid);
+    }
+
+    @Test
     public void testDividingDoubles() {
         double test = BasicMath.divideNumbers(9.0, 4.0);
+        System.out.print(test);
         double valid = 2.25;
         assertTrue(test == valid);
     }
@@ -85,7 +93,6 @@ public class TestBasicMath {
         int test = BasicMath.subtractNumbers(12, 4);
         int valid = 8;
         assertTrue(test == valid);
-        return;
     }
 
     @Test
@@ -99,6 +106,36 @@ public class TestBasicMath {
     public void testSubtractingDoubles2() {
         double test = BasicMath.subtractNumbers(12.333, 4.0005);
         double valid = 8.3325;
+        assertTrue(test == valid);
+    }
+
+    @Test
+    public void testSquaresInt() {
+        int test = BasicMath.square(4);
+        int valid = 16;
+        assertTrue(test == valid);
+    }
+
+    @Test
+    public void testSquaresDouble() {
+        double test = BasicMath.square(4.5);
+        double valid = 20.25;
+        assertTrue(test == valid);
+    }
+
+    @Test
+    public void testSquareRootsInt() {
+        double test = BasicMath.squareRoot(16.0);
+        double valid = 4.0;
+        System.out.print("The test: " + test + " the valid: " + valid);
+        assertTrue(test == valid);
+    }
+
+    @Test
+    public void testSquareRootsDouble() {
+        double test = BasicMath.squareRoot(33.3);
+        System.out.print(test);
+        double valid = 5.7706152;
         assertTrue(test == valid);
     }
 

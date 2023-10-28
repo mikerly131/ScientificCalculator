@@ -13,23 +13,15 @@ public class BasicMath {
         return addNumbers;
     }
 
-    /*  additional adding methods if inputs are mixed
-    public static double addNumbers(double displayNumber, int givenNumber) {
-        double addNumbers = displayNumber + givenNumber;
-        return addNumbers;
-    }
-
-    public static double addNumbers(int displayNumber, double givenNumber) {
-        double addNumbers = displayNumber + givenNumber;
-        return addNumbers;
-    }
-*/
-
-
     // Method to divide two ints, one from display and one from input.  Should we display remainders?
     public static int divideNumbers(int displayNumber, int givenNumber) {
         int divideNumbers = displayNumber / givenNumber;
         return divideNumbers;
+    }
+
+    public static int getRemainders(int displayNumber, int givenNumber) {
+        int remainders = displayNumber % givenNumber;
+        return remainders;
     }
 
     public static double divideNumbers(double displayNumber, double givenNumber) {
@@ -59,5 +51,28 @@ public class BasicMath {
         double subtractedNumbers = displayNumber - givenNumber;
         return subtractedNumbers;
     }
+
+    public static int square(int displayNumber) {
+        int sq = displayNumber * displayNumber;
+        return sq;
+    }
+
+    public static double square(double displayNumber) {
+        double sq = displayNumber * displayNumber;
+        return sq;
+    }
+
+    public static double squareRoot(int displayNumber) {
+        double squareRoot = Math.sqrt((double)displayNumber);
+        return squareRoot;
+    }
+
+    public static double squareRoot(double displayNumber) {
+        double squareRoot = Math.sqrt((double)displayNumber);
+        squareRoot = Math.round(squareRoot * 10000000) / 10000000.0;
+        return squareRoot;
+    }
+
+
 
 }
