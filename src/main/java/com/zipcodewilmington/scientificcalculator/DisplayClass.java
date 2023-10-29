@@ -1,8 +1,6 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import static com.zipcodewilmington.scientificcalculator.Console.println;
-
-public class DisplayClass {
+public class DisplayClass  {
     //trying to convert input string into ints/doubles/ and chars
    /* public static Integer stringToInt(String prompt){
         println(prompt);
@@ -22,9 +20,10 @@ public class DisplayClass {
         println(prompt);
         return prompt;
     }*/
+
     //Extracts two numerical values from string and converts to double
-    public static Double[] integerExtractor(){
-        String intExtract = Console.getStringInput(System.in.toString());
+    public static Double[] integerExtractor(String w){
+        String intExtract = w;
         intExtract = intExtract.replaceAll("\\D", " ");
         //split string
         String[] intExtractArr = intExtract.split("\\s+", 2);
@@ -34,15 +33,22 @@ public class DisplayClass {
             Double[] givenNumMulti = new Double[2];
             givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
             givenNumMulti[1] = Double.parseDouble(intExtractArr[1]);
-            System.out.println(givenNumMulti[0]);
-            System.out.println(givenNumMulti[1]);
+            //System.out.println(givenNumMulti[0]);
+            //System.out.println(givenNumMulti[1]);
             return givenNumMulti;
         }else{
             Double[] givenNumMulti = new Double[1];
             givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
-            System.out.println(givenNumMulti[0]);
+            //System.out.println(givenNumMulti[0]);
             return givenNumMulti;
         }
+    }
+    //
+    public static String operatorExtractor(String w){
+        String opExtract = w;
+        opExtract = opExtract.replaceAll("[\\d, \\s]", "");
+        //System.out.println(opExtract);
+        return opExtract;
     }
     //clears the console display
     public static void clearDisplay(){

@@ -22,7 +22,7 @@ public class Console {
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
+  /*  public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         return Integer.valueOf(scanner.nextLine());
@@ -33,4 +33,5 @@ public class Console {
         println(prompt);
         return Double.valueOf(scanner.nextLine());
     }
+*/
 }
