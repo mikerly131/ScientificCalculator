@@ -1,6 +1,5 @@
 package com.zipcodewilmington.scientificcalculator;
 
-import static com.zipcodewilmington.scientificcalculator.Console.print;
 import static com.zipcodewilmington.scientificcalculator.Console.println;
 
 public class DisplayClass {
@@ -17,13 +16,24 @@ public class DisplayClass {
         return strInt;
     }*/
     //integerExtract - converts user input into a string and then extracts the numerical values
-    static String integerExtract(String prompt){
+    /*static String integerExtract(String prompt){
         prompt = Console.getStringInput(System.in.toString());
         prompt = prompt.replaceAll("\\D", " ");
         println(prompt);
         return prompt;
+    }*/
+    //Extracts two numerical values from string and converts to double
+    public static void integerExtractor(){
+        String intExtract = Console.getStringInput(System.in.toString());
+        intExtract = intExtract.replaceAll("\\D", " ");
+        //split string
+        String[] intExtractArr = intExtract.split("\\s+", 2);
+        //converts string arr values into ints
+        Double givenNum = Double.parseDouble(intExtractArr[0]);
+        Double givenNum2 = Double.parseDouble(intExtractArr[1]);
+        System.out.println(givenNum);
+        System.out.println(givenNum2);
     }
-
     //clears the console display
     public static void clearDisplay(){
         System.out.flush();
