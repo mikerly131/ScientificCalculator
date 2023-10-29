@@ -9,7 +9,15 @@ public class MainApplication {
         Console.println("Welcome to my calculator!");
         Console.println("0");
       /*  String s = DisplayClass.integerExtract("Enter a string");
+
+
+        // User needs to enter the operations they want to perform.   SQRT means to do square root.
+        String s = Console.getStringInput("Enter a string");
+
+        //
         Integer i = Console.getIntegerInput("Enter an integer");
+
+        //
         Double d = Console.getDoubleInput("Enter a double.");
 
         Console.println("The user input %s as a string", s);
