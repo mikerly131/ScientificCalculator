@@ -16,10 +16,16 @@ public class DisplayClass {
         }
         return strInt;
     }*/
+    //integerExtract - converts user input into a string and then extracts the numerical values
     static String integerExtract(String prompt){
         prompt = Console.getStringInput(System.in.toString());
         prompt = prompt.replaceAll("\\D", " ");
         println(prompt);
         return prompt;
+    }
+
+    //clears the console display
+    public static void clearDisplay(){
+        System.out.flush();
     }
 }
