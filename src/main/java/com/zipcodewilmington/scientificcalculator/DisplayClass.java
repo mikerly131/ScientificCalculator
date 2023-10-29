@@ -23,16 +23,18 @@ public class DisplayClass {
         return prompt;
     }*/
     //Extracts two numerical values from string and converts to double
-    public static void integerExtractor(){
+    public static Double[] integerExtractor(){
         String intExtract = Console.getStringInput(System.in.toString());
         intExtract = intExtract.replaceAll("\\D", " ");
         //split string
         String[] intExtractArr = intExtract.split("\\s+", 2);
         //converts string arr values into ints
-        Double givenNum = Double.parseDouble(intExtractArr[0]);
-        Double givenNum2 = Double.parseDouble(intExtractArr[1]);
-        System.out.println(givenNum);
-        System.out.println(givenNum2);
+        Double[] givenNumMulti = new Double[2];
+        givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
+        givenNumMulti[1] = Double.parseDouble(intExtractArr[1]);
+        System.out.println(givenNumMulti[0]);
+        System.out.println(givenNumMulti[1]);
+        return givenNumMulti;
     }
     //clears the console display
     public static void clearDisplay(){
