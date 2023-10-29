@@ -28,13 +28,21 @@ public class DisplayClass {
         intExtract = intExtract.replaceAll("\\D", " ");
         //split string
         String[] intExtractArr = intExtract.split("\\s+", 2);
-        //converts string arr values into ints
-        Double[] givenNumMulti = new Double[2];
-        givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
-        givenNumMulti[1] = Double.parseDouble(intExtractArr[1]);
-        System.out.println(givenNumMulti[0]);
-        System.out.println(givenNumMulti[1]);
-        return givenNumMulti;
+        //if else so the user can enter 1 or 2 numbers
+        if (intExtractArr.length > 1) {
+            //converts string arr values into ints
+            Double[] givenNumMulti = new Double[2];
+            givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
+            givenNumMulti[1] = Double.parseDouble(intExtractArr[1]);
+            System.out.println(givenNumMulti[0]);
+            System.out.println(givenNumMulti[1]);
+            return givenNumMulti;
+        }else{
+            Double[] givenNumMulti = new Double[1];
+            givenNumMulti[0] = Double.parseDouble(intExtractArr[0]);
+            System.out.println(givenNumMulti[0]);
+            return givenNumMulti;
+        }
     }
     //clears the console display
     public static void clearDisplay(){
