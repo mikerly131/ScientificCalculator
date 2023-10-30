@@ -1,0 +1,32 @@
+Backlog Remaining:
+	Clear error before next operation (kinda works, right?)
+	Invert the sign of the number on display (ran out of time)
+	Custom Feature 1
+	Customer Feature 2
+
+Class Design:   DisplayClass, Console, Calculator::ScientificCalculator::TrigFunctions
+Structure:
+	Main - Runs the program. Greeting, Instructions, Initilalize Display, Declare SciCalc Obj, Controls Flow (case-switch)
+	DisplayClass - This actually is breaking apart the string into numbers and operators.
+	Console - Handles inputs (ours just gathers, and in display handles breaking the string, I think)
+	Calculator - abstract class for arithmetic math operations
+	ScientificCalculator - class inherits from Calculator, has methods for scientific operations, constructor for objects
+	TrigFunctions - subclass of ScientificCalculator?  Could just be in it, but why not.
+	TestClasses for all
+
+
+ScientificCalculator Object:  If we had enough time all the methods would be called through this object, not just scientific and trig operations.  We call them through the Calculator class but probably didn’t need to?
+    Do we need the TrigCalc to be an object?  Can't we just call methods or put those methods in with calc or sci calc?
+Custom Features:  Ran out of time.  Added some methods for modular division, but didn’t get to implement them.
+
+What I Did:
+* Calculator::Arithmetic, exponents, squares, roots, inverses
+* Unit tests for Calculator in CalculatorTest
+* Learned and taught the team how to commit, push to their code/branches from local to upstream fork
+* Troubleshot issue: case switch failing calls to the ScientificCalculator class.
+* Troubleshot issue: ScientificCalculator & TrigFunction classes methods not being callable, missing variables
+* Troubleshot issue: not tracking and displaying the current value of most recent operation/method
+
+Lessons Learned:
+* Probably should have spent more time on “design” - what classes should have, what and why they relate, control flow.
+* Need to budget more time for testing and trouble shooting, and less on making features robust/better.  Depending on feedback.  We don’t have all the tests.
